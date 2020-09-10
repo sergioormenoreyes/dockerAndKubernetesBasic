@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  hellotestangular:
+    container_name: hellotest
+    build:
+        context: ./helloTest
+    ports:
+      - "4200:80"
+  helloworldjava:
+    container_name: helloworldjava
+    build:
+        context: ./dockerExample
+    ports:
+      - "8081:8081"
