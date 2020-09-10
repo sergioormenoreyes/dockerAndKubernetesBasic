@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: dockerExample
+  name: dockerExample
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dockerExample-test
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: dockerExample
+    spec:
+      containers:
+      - image: gcr.io/psyched-ceiling-286818/dockerExample:latest
+        name: dockerExample
+        resources: {}
+status: {}
